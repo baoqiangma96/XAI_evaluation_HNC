@@ -12,9 +12,7 @@ https://hecktor25.grand-challenge.org/data-download/ apply join the challenge an
 
 Run python ./Data/preprocess_hecktor2025.py  --task1_csv "./Data/HECKTOR2025 Task 1 Training/Task 1/HECKTOR_2025_Training_Task_1.csv"  --task2_csv "./Data/HECKTOR2025 Task 2 Training/Task 2/HECKTOR_2025_Training_Task_2.csv" --task1_dir "./Data/HECKTOR2025 Task 1 Training/Task 1"  --out_csv ./Data/overlap_split.csv  --out_nifti  ./Data/preprocessed_nii --out_preview ./Data/preview_slices  --out_npz ./Data/preprocessed_npz
 
-then you will get the processed imaging data (nifti, npz) and clincial data for outcome prediction model training: 
-
-./Data/npz/**.npz and ./Data/HECKTOR_2025_Training_Task_2_overlap_split.csv . 
+then you will get the processed imaging data (nifti, npz) and clincial data for outcome prediction model training. 
 
 
 
