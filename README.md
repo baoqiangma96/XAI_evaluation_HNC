@@ -9,7 +9,10 @@ The framework is as below:
 !!!!!!!!!!!!!! Part 1. Data download and preprocessing (skip, directly go to Part 3 if you only care XAI evaluation part)
 We used HECKTOR 2025 challenge dataset, please access the 
 https://hecktor25.grand-challenge.org/data-download/ apply join the challenge and download data. We need the data from Task 1 and Task 2. Download, unzip and put them under the /Data folder.
-Run python ./Data/preprocessing.py, then you will get the processed imaging data and clincial data for outcome prediction model training: ./Data/npz/**.npz and ./Data/HECKTOR_2025_Training_Task_2_overlap_split.csv . 
+
+Run python ./Data/preprocessing.py, then you will get the processed imaging data and clincial data for outcome prediction model training: 
+
+./Data/npz/**.npz and ./Data/HECKTOR_2025_Training_Task_2_overlap_split.csv . 
 
 
 
