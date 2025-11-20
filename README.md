@@ -15,7 +15,8 @@ Run python ./Data/preprocess_hecktor2025.py  --task1_csv "./Data/HECKTOR2025 Tas
 then you will get the processed imaging data (nifti, npz) and clincial data for outcome prediction model training. 
 
 
-
 !!!!!!!!!!!!!! Part 2. Outcome prediction model training (skip, directly go to Part 3 if you only care XAI evaluation part)
+
+python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv --oversample True --sum_channel True --endpoint_path ./Data/clinical_data/overlap_split.csv --data_path ./Data/preprocessed_nii/   --result_path  ./result/ 
 
 !!!!!!!!!!!!!! Part 3. XAI evluation in website, for better interaction and visisulization
