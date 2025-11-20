@@ -6,7 +6,12 @@ This study implemented a comprehensive evaluation of 13 explainable (saliency-ba
 The framework is as below:
 <img width="3297" height="1534" alt="3" src="https://github.com/user-attachments/assets/5be01f2e-d7b1-4ad5-8e9a-07ce76f05d80" />
 
-!!!!!!!!!!!!!! Part 1. Data download and preprocessing 
+!!!!!!!!!!!!!! Part 1. Data download and preprocessing (skip, directly go to Part 3 if you only care XAI evaluation part)
+We used HECKTOR 2025 challenge dataset, please access the 
+https://hecktor25.grand-challenge.org/data-download/ apply join the challenge and download data. We need the data from Task 1 and Task 2. Download, unzip and put them under the /Data folder.
+
+
+
 
 !!!!!!!!!!!!!! Part 2. Outcome prediction model training (skip, directly go to Part 3 if you only care XAI evaluation part)
 
