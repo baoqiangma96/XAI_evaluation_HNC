@@ -145,7 +145,7 @@ def main():
     # =============================
     # Training loop
     # =============================
-    max_epochs = 100
+    max_epochs = 50
     print(f"🚀 Start training ({comb_name.upper()} mode) for {max_epochs} epochs using AdamW optimizer...")
 
     for epoch in range(max_epochs):
@@ -213,3 +213,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
