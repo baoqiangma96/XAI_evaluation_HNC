@@ -11,19 +11,19 @@ def parse_opts():
     
     parser.add_argument(
         '--result_path',
-        default='./result/',
+        default='./ModelTraining/result/',
         type=str,
         help='Result directory path')
     
     parser.add_argument(
         '--data_path',
-        default='./Data/preprocessed/',
+        default='./Data/preprocessed_nii/',
         type=str,
         help='Data directory path (after resampled)')
 
     parser.add_argument(
         '--endpoint_path',
-        default='./Data/clinical_data/HECKTOR_2025_Training_Task_2_overlap_split_2yr.csv',
+        default='./Data/clinical_data/overlap_split.csv',
         type=str,
         help='Endpoint information path')
 
@@ -112,3 +112,4 @@ def parse_opts():
     args = parser.parse_args()
 
     return args
+
