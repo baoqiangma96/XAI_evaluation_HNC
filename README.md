@@ -20,3 +20,5 @@ then you will get the processed imaging data (nifti, npz) and clincial data for 
 python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv --oversample True --sum_channel True --endpoint_path ./Data/clinical_data/overlap_split.csv --data_path ./Data/preprocessed_nii/   --result_path  ./result/ 
 
 !!!!!!!!!!!!!! Part 3. XAI evluation in website, for better interaction and visisulization
+
+python -m xai_app.app , then access webiste localhost:7860, you will see the User face for running and evluation XAI. 
