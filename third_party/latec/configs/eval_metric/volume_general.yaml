@@ -1,0 +1,100 @@
+# Faithfulness
+
+faithfulnesscorrelation:
+  nr_runs: 15 #100
+  subset_size:  512 #2304  #56
+  perturb_baseline: "black"
+  softmax : False 
+
+faithfulnessestimate:
+  features_in_step: 512 #2304  #56
+  perturb_baseline: "black"
+  softmax : False 
+
+monotonicitycorrelation:
+  nr_samples: 3 #10
+  features_in_step: 512  #392
+  perturb_baseline:  "uniform"
+  softmax : False 
+
+pixelflipping:
+  features_in_step: 512 #56
+  perturb_baseline:  "black"
+  softmax : False 
+
+regionperturbation:
+  patch_size: 24 #4
+  regions_evaluation: 1 # 20
+  perturb_baseline: "uniform"
+  softmax : False 
+
+insertion:
+  pixel_batch_size: 2304 #50 
+  sigma: 0.1 #2.5
+  kernel_size: 1
+  softmax : False 
+
+deletion:
+  pixel_batch_size: 2304 #50
+  softmax : False  
+
+irof:
+  segmentation_method: "slic"
+  perturb_baseline: "black"
+  softmax : False 
+
+road:
+  noise: 0.1 #2.5
+  percentages_max: 100
+  softmax : False 
+
+sufficiency:
+  threshold: 0.75
+  softmax : False 
+
+infidelity:
+  n_perturb_samples: 50
+  softmax : False 
+
+# Robustness
+
+locallipschitzestimate:
+  nr_samples: 2
+  perturb_std: 0.1 #0.2
+  perturb_mean: 0.0
+  softmax : False 
+
+maxsensitivity:
+  nr_samples: 2
+  lower_bound: 0.1 # 0.2
+  softmax : False 
+
+continuity:
+  patch_size: 24  #7
+  nr_steps: 20
+  perturb_baseline: "uniform"
+  softmax : False 
+
+relativeinputstability:
+  nr_samples: 3
+  softmax : False 
+
+relativeoutputstability:
+  nr_samples: 3
+  softmax : False 
+
+relativerepresentationstability:
+  nr_samples: 3
+  softmax : False 
+
+# Complexity
+
+sparseness: 
+  softmax : False #{}
+
+complexity: 
+  softmax : False #{}
+
+effectivecomplexity:
+  eps: 0.001
+  softmax : False 

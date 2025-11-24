@@ -1,0 +1,21 @@
+# @package _global_
+
+#modality: "volume"   # 👈 default; we'll override from code
+
+defaults:
+  - _self_
+  - data: imagenet.yaml #volume_custom.yaml #organmnist3d.yaml  #imagenet.yaml # choose datamodule with `test_dataloader()` for evaluation
+  - logger: null
+  - paths: default.yaml
+  - explain_method: image.yaml  # image.yaml # 👈 auto-switch 2D / 3D  #image.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+task_name: "explain"
+
+tags: ["dev"]
+time: ${now:%Y-%m-%d}_${now:%H-%M-%S}
+
+# passing checkpoint path is necessary for evaluation
+ckpt_path: ${paths.data_dir}/model_weights/
+chunk_size: 2

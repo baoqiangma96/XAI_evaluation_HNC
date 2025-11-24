@@ -1,0 +1,48 @@
+occlusion:
+  strides: 1
+  sliding_window_shapes: 3
+  baselines: 0
+  perturbations_per_eval: 80
+  show_progress: False  
+
+
+lime:
+  alpha: 4.0
+  n_samples: 10
+  perturbations_per_eval: 5 
+
+kernelshap:
+  baselines: 0
+  n_samples: 10
+  perturbations_per_eval: 5
+
+saliency: {}
+
+inputxgradient: {}
+
+guidedbackprop: {}
+
+integratedgradients:
+  baselines: 0
+  n_steps: 16
+
+expectedgradients:
+  n_samples: 40
+  stdevs: 0.001
+
+deeplift:
+  eps: 0.000000001
+  baselines: 0
+
+deepliftshap: {}
+
+lrp:
+  eps: 0.00001
+  gamma: 0.25
+
+attention: {}
+
+attentionrollout: {}
+
+attentionlrp: {}
+
