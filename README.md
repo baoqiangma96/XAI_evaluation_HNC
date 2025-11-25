@@ -120,9 +120,9 @@ python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv -
 🌐 Part 3 — Run the XAI Web App
 
 Start the interface:
-
+```txt
 python -m xai_app.app
-
+```
 Then open:
 
 http://localhost:7860
