@@ -6,7 +6,7 @@ The framework is as below:
 <img width="3297" height="1534" alt="3" src="https://github.com/user-attachments/assets/5be01f2e-d7b1-4ad5-8e9a-07ce76f05d80" />
 
 
-🔧 Installation
+##🔧 Installation
 
 1. Create a new Conda environment
 ```txt
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```
 The requirements.txt includes the correct PyTorch CUDA 11.8 wheels. If your system uses a different CUDA version (e.g., CUDA 12.x), please install the matching PyTorch version first from the official website: 👉 https://pytorch.org/get-started/locally/ 
 
-📦 Part 1 — Data Download & Preprocessing
+##📦 Part 1 — Data Download & Preprocessing
 
 (Skip if you only want to run XAI evaluation → go to Part 3.)
 
@@ -57,7 +57,7 @@ python ./Data/preprocess_hecktor2025.py \
 ```
 Dataset is now ready for model training and XAI evaluation.  
 
-⚙️ Part 2 — Outcome Prediction Model Training
+##⚙️ Part 2 — Outcome Prediction Model Training
 
 (Skip this section if you only want to run XAI evaluation → go to Part 3.)
 
@@ -118,7 +118,7 @@ python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv -
 --sum_channel True → merges CT/PET/GTV into combined tensor using sum 
 ```
 
-🌐 Part 3 — Run the XAI Web App
+##🌐 Part 3 — Run the XAI Web App
 
 Start the interface:
 ```txt
