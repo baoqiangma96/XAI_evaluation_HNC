@@ -107,7 +107,8 @@ If you do NOT want to use WandB:
 
 Disable logging by running:
 ```txt
-WANDB_MODE=disabled python ./ModelTraining/main.py ...
+$env:WANDB_MODE="disabled"
+python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv --oversample True --sum_channel True --endpoint_path ./Data/overlap_split.csv --data_path ./Data/preprocessed_nii/ --result_path ./result/
 ```
 4. Notes
 ```txt
