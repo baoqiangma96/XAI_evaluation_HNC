@@ -6,7 +6,7 @@ The framework is as below:
 <img width="3297" height="1534" alt="3" src="https://github.com/user-attachments/assets/5be01f2e-d7b1-4ad5-8e9a-07ce76f05d80" />
 
 
-##🔧 Installation
+## 🔧 Installation
 
 1. Create a new Conda environment
 ```txt
@@ -19,11 +19,11 @@ pip install -r requirements.txt
 ```
 The requirements.txt includes the correct PyTorch CUDA 11.8 wheels. If your system uses a different CUDA version (e.g., CUDA 12.x), please install the matching PyTorch version first from the official website: 👉 https://pytorch.org/get-started/locally/ 
 
-##📦 Part 1 — Data Download & Preprocessing
+## 📦 Part 1 — Data Download & Preprocessing
 
 (Skip if you only want to run XAI evaluation → go to Part 3.)
 
-1. Download HECKTOR 2025 Data
+### 1. Download HECKTOR 2025 Data
 
 Go to: https://hecktor25.grand-challenge.org/data-download/
 
@@ -35,7 +35,7 @@ Unzip both datasets into the project's /Data folder:
    ├── HECKTOR2025 Task 1 Training/Task 1/
    └── HECKTOR2025 Task 2 Training/Task 2/
 ```
-2. Run preprocessing
+### 2. Run preprocessing
 
 This script prepares CT/PET data, segmentation masks, NPZ arrays, and the combined clinical CSV.
 ```txt
@@ -48,7 +48,7 @@ python ./Data/preprocess_hecktor2025.py \
     --out_preview "./Data/preview_slices" \
     --out_npz "./Data/preprocessed_npz"
 ```
-3. Output folders
+### 3. Output folders
 ```txt
 /Data/preprocessed_nii/     → Preprocessed NIfTI (CT/PET)
 /Data/preprocessed_npz/     → Preprocessed NPZ arrays
@@ -57,13 +57,13 @@ python ./Data/preprocess_hecktor2025.py \
 ```
 Dataset is now ready for model training and XAI evaluation.  
 
-##⚙️ Part 2 — Outcome Prediction Model Training
+## ⚙️ Part 2 — Outcome Prediction Model Training
 
 (Skip this section if you only want to run XAI evaluation → go to Part 3.)
 
 After preprocessing the HECKTOR 2025 data, you can train the 3D DenseNet121 prognostic model.
 
-1. Run model training
+### 1. Run model training
 ```txt
 python ./ModelTraining/main.py \
     --model DenseNet121 \
@@ -74,7 +74,7 @@ python ./ModelTraining/main.py \
     --data_path ./Data/preprocessed_nii/ \
     --result_path ./result/
 ```
-2. Output
+### 2. Output
 
 The training will generate:
 ```txt
@@ -84,7 +84,7 @@ The training will generate:
 
 This checkpoint will be used for XAI evaluation in Part 3.
 
-3. WandB Logging (Optional)
+### 3. WandB Logging (Optional)
 
 This project logs training metrics using Weights & Biases.
 The training script initializes WandB as:
@@ -111,14 +111,14 @@ Disable logging by running:
 $env:WANDB_MODE="disabled"
 python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv --oversample True --sum_channel True --endpoint_path ./Data/overlap_split.csv --data_path ./Data/preprocessed_nii/ --result_path ./result/
 ```
-4. Notes
+### 4. Notes
 ```txt
 --input_modality CT PET gtv → model uses 3 modalities
 --oversample True → balances event/non-event cases
 --sum_channel True → merges CT/PET/GTV into combined tensor using sum 
 ```
 
-##🌐 Part 3 — Run the XAI Web App
+## 🌐 Part 3 — Run the XAI Web App
 
 Start the interface:
 ```txt
@@ -130,7 +130,7 @@ http://localhost:7860
 
 (Use --server_port 7870 if you want a different port.)
 
-🔹 Tab 1 — Model
+### 🔹 Tab 1 — Model
 
 In this tab, you load the model trained in Part 2.
 
@@ -146,7 +146,7 @@ After uploading the files, click Load model and the model info will appear.
 
 <img width="1711" height="891" alt="image" src="https://github.com/user-attachments/assets/1c748326-a2ea-405b-9657-79d5e4aa7597" />
 
-🔹 Tab 2 — Explain
+### 🔹 Tab 2 — Explain
 
 This tab generates saliency maps for your model using selected XAI methods.
 
@@ -186,7 +186,7 @@ This tab lets you visually compare different explanation methods before running 
 
 <img width="1516" height="945" alt="image" src="https://github.com/user-attachments/assets/c13d84fa-9c1b-4882-a9b0-fb27a056bb79" />
 
-🔹 Tab 3 — Evaluate
+### 🔹 Tab 3 — Evaluate
 
 This tab runs quantitative evaluation of all selected XAI methods using four categories of metrics: faithfulness, robustness, complexity, and plausibility.
 
