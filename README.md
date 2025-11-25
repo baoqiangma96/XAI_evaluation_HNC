@@ -117,6 +117,33 @@ python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv -
 --sum_channel True → merges CT/PET/GTV into combined tensor using sum 
 ```
 
+🌐 Part 3 — Run the XAI Web App
+
+Start the interface:
+
+python -m xai_app.app
+
+Then open:
+
+http://localhost:7860
+
+(Use --server_port 7870 if you want a different port.)
+
+🔹 Tab 1 — Model
+
+In this tab, you load the model trained in Part 2.
+
+You can either:
+
+Upload your model architecture (.py) from Part 2  
+Upload your trained weights (.safetensors) from Part 2
+
+Or simply download the pre-trained example files here:
+👉 model_sum.py + epoch_50_sum.safetensors: [YOUR_DOWNLOAD_LINK_HERE](https://drive.google.com/drive/folders/1ldCwm6v4vkwp9vcfjJ0G_aIbgniCg1vs?usp=sharing) 
+
+After uploading the files, click Load model and the model info will appear.
+
+
 
 !!!!!!!!!!!!!! Part 3. XAI evluation in website, for better interaction and visisulization
 
