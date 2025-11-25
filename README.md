@@ -141,7 +141,9 @@ Upload your trained weights (.safetensors) from Part 2
 Or simply download the pre-trained example files here:
 👉 model_sum.py + epoch_50_sum.safetensors: [YOUR_DOWNLOAD_LINK_HERE](https://drive.google.com/drive/folders/1ldCwm6v4vkwp9vcfjJ0G_aIbgniCg1vs?usp=sharing) 
 
-After uploading the files, click Load model and the model info will appear.
+After uploading the files, click Load model and the model info will appear.  
+<img width="1711" height="891" alt="image" src="https://github.com/user-attachments/assets/1c748326-a2ea-405b-9657-79d5e4aa7597" />
+
 
 
 
