@@ -117,9 +117,6 @@ python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv -
 --sum_channel True → merges CT/PET/GTV into combined tensor using sum 
 ```
 
-!!!!!!!!!!!!!! Part 2. Outcome prediction model training (skip, directly go to Part 3 if you only care XAI evaluation part)
-
-python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv --oversample True --sum_channel True --endpoint_path ./Data/clinical_data/overlap_split.csv --data_path ./Data/preprocessed_nii/   --result_path  ./result/ 
 
 !!!!!!!!!!!!!! Part 3. XAI evluation in website, for better interaction and visisulization
 
