@@ -4,6 +4,7 @@ Modular version with clean separation of UI, XAI, and evaluation.
 """
 
 import gradio as gr
+import argparse
 
 # Import UI builders
 from xai_app.ui.tab_model import build_model_tab
@@ -43,11 +44,19 @@ def create_app():
 
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--server_port", type=int, default=7860)
+    parser.add_argument("--server_name", type=str, default="0.0.0.0")
+    parser.add_argument("--share", action="store_true", default=False)
+    args = parser.parse_args()
+
     demo = create_app()
     demo.queue()
+
     demo.launch(
-        server_name="0.0.0.0",
-        server_port=7860,
-        share=True,
+        server_name=args.server_name,
+        server_port=args.server_port,
+        share=args.share,
         quiet=True
     )
