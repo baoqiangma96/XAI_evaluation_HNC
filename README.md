@@ -39,9 +39,9 @@ Unzip both datasets into the project's /Data folder:
 This script prepares CT/PET data, segmentation masks, NPZ arrays, and the combined clinical CSV.
 ```txt
 python ./Data/preprocess_hecktor2025.py \
-    --task1_csv "./Data/HECKTOR2025 Task 1 Training/Task 1/HECKTOR_2025_Training_Task_1.csv" \
-    --task2_csv "./Data/HECKTOR2025 Task 2 Training/Task 2/HECKTOR_2025_Training_Task_2.csv" \
-    --task1_dir "./Data/HECKTOR2025 Task 1 Training/Task 1" \
+    --task1_csv "./Data/HECKTOR 2025 Task 1 Training/Task 1/HECKTOR_2025_Training_Task_1.csv" \
+    --task2_csv "./Data/HECKTOR 2025 Task 2 Training/Task 2/HECKTOR_2025_Training_Task_2.csv" \
+    --task1_dir "./Data/HECKTOR 2025 Task 1 Training/Task 1" \
     --out_csv "./Data/overlap_split.csv" \
     --out_nifti "./Data/preprocessed_nii" \
     --out_preview "./Data/preview_slices" \
