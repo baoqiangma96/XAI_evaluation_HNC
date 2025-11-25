@@ -20,6 +20,44 @@ pip install -r requirements.txt
 
 The requirements.txt includes the correct PyTorch CUDA 11.8 wheels. If your system uses a different CUDA version (e.g., CUDA 12.x), please install the matching PyTorch version first from the official website: 👉 https://pytorch.org/get-started/locally/ 
 
+📦 Part 1 — Data Download & Preprocessing
+
+(Skip if you only want to run XAI evaluation → go to Part 3.)
+
+1. Download HECKTOR 2025 Data
+
+Go to: https://hecktor25.grand-challenge.org/data-download/
+
+Join the challenge and download Task 1 and Task 2 training data
+
+Unzip both datasets into the project's /Data folder:
+
+/Data
+   ├── HECKTOR2025 Task 1 Training/Task 1/
+   └── HECKTOR2025 Task 2 Training/Task 2/
+
+2. Run preprocessing
+
+This script prepares CT/PET data, segmentation masks, NPZ arrays, and the combined clinical CSV.
+
+python ./Data/preprocess_hecktor2025.py \
+    --task1_csv "./Data/HECKTOR2025 Task 1 Training/Task 1/HECKTOR_2025_Training_Task_1.csv" \
+    --task2_csv "./Data/HECKTOR2025 Task 2 Training/Task 2/HECKTOR_2025_Training_Task_2.csv" \
+    --task1_dir "./Data/HECKTOR2025 Task 1 Training/Task 1" \
+    --out_csv "./Data/overlap_split.csv" \
+    --out_nifti "./Data/preprocessed_nii" \
+    --out_preview "./Data/preview_slices" \
+    --out_npz "./Data/preprocessed_npz"
+
+3. Output folders
+/Data/preprocessed_nii/     → Preprocessed NIfTI (CT/PET)
+/Data/preprocessed_npz/     → Preprocessed NPZ arrays
+/Data/preview_slices/       → 2D preview images
+/Data/overlap_split.csv     → Final clinical CSV
+
+
+Dataset is now ready for model training and XAI evaluation.
+
 
 !!!!!!!!!!!!!! Part 1. Data download and preprocessing (skip, directly go to Part 3 if you only care XAI evaluation part)
 We used HECKTOR 2025 challenge dataset, please access the 
