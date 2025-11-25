@@ -66,7 +66,7 @@ After preprocessing the HECKTOR 2025 data, you can train the 3D DenseNet121 prog
 ```txt
 python ./ModelTraining/main.py \
     --model DenseNet121 \
-    --input_modality CT PET gtv \
+    --input_modality CT PT gtv \
     --oversample True \
     --sum_channel True \
     --endpoint_path ./Data/overlap_split.csv \
