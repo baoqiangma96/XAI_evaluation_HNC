@@ -185,7 +185,69 @@ This tab lets you visually compare different explanation methods before running 
 
 <img width="1516" height="945" alt="image" src="https://github.com/user-attachments/assets/c13d84fa-9c1b-4882-a9b0-fb27a056bb79" />
 
+🔹 Tab 3 — Evaluate
 
-!!!!!!!!!!!!!! Part 3. XAI evluation in website, for better interaction and visisulization
+This tab runs quantitative evaluation of all selected XAI methods using four categories of metrics: faithfulness, robustness, complexity, and plausibility.
 
-python -m xai_app.app , then access webiste localhost:7860, you will see the User face for running and evluation XAI. 
+What you need to upload
+
+One or more ground-truth GTV masks (.npz only)  
+These should correspond to the same patients you used in Tab 2.
+
+Only .npz masks are supported in this version.  
+NIfTI masks (.nii/.nii.gz) are not supported for evaluation.  
+
+What you can do
+
+The interface has four groups of metrics:
+
+1️⃣ Faithfulness metrics
+
+Measure how well an explanation reflects the model’s true behavior  
+(e.g., insertion, deletion, pixel-flipping, infidelity…)
+
+2️⃣ Robustness metrics
+
+Measure stability under perturbations  
+(e.g., local Lipschitz estimate, maximum sensitivity…)
+
+3️⃣ Complexity metrics
+
+Measure sparsity and compactness of explanations  
+(e.g., sparseness, effective complexity…)
+
+4️⃣ Plausibility metrics
+
+Compare XAI heatmaps with GTV tumor masks (.npz)  
+(e.g., Dice, IoU, Pointing Game, Precision@k, API…)
+
+➡ Only selected metrics will be executed. And don't select regionperturbation and continuity, because they are either slow or cause error. 
+
+What you will get
+
+After clicking Run evaluation:
+
+✔ Summary CSV
+
+Aggregated results (mean / std / median) for each method × metric.
+
+✔ Detailed CSV
+
+Full evaluation table across all patients.
+
+✔ Ranking CSV
+
+Per-metric method rankings + aggregated rankings across  
+faithfulness / robustness / complexity / plausibility.
+
+All CSV files appear on the right and can be downloaded directly.
+
+Notes
+
+Metrics use the LATEC benchmark implementations (adapted for 3D inputs).
+
+Evaluation uses the XAI maps generated from Tab 2.
+
+Plausibility metrics require .npz GTV masks.
+
+If a metric is incompatible or fails, it is skipped automatically.
