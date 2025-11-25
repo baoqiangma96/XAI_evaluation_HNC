@@ -111,9 +111,9 @@ WANDB_MODE=disabled python ./ModelTraining/main.py ...
 ```
 4. Notes
 ```txt
---input_modality CT PET gtv → model uses 3 channels
+--input_modality CT PET gtv → model uses 3 modalities
 --oversample True → balances event/non-event cases
---sum_channel True → merges CT/PET/GTV into combined tensor
+--sum_channel True → merges CT/PET/GTV into combined tensor using sum 
 ```
 
 !!!!!!!!!!!!!! Part 2. Outcome prediction model training (skip, directly go to Part 3 if you only care XAI evaluation part)
