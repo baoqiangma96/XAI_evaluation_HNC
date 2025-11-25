@@ -1,6 +1,5 @@
 # XAI_evaluation_HNC
-This is the official implementation code of paper "Ranking XAI Methods for Head and Neck Cancer Outcome Prediction", which is sumitted to ISBI 2026. 
-
+This is the official implementation code of paper "Ranking XAI Methods for Head and Neck Cancer Outcome Prediction", which is sumitted to ISBI 2026.  
 This study implemented a comprehensive evaluation of 13 explainable (saliency-based) AI methods using 20 metrics of faithfulness, robustness, complexity and plausibility. The user case is a head and neck outcome prediction model based on 3D DenseNet121 with the input of CT/PET/GTV. 
 
 The framework is as below:
@@ -9,15 +8,14 @@ The framework is as below:
 🔧 Installation
 
 1. Create a new Conda environment
-   
+```txt
 conda create -n xai_app python=3.11
-
 conda activate xai_app
-
+```
 2. Install the required packages
-
+```txt
 pip install -r requirements.txt
-
+```
 The requirements.txt includes the correct PyTorch CUDA 11.8 wheels. If your system uses a different CUDA version (e.g., CUDA 12.x), please install the matching PyTorch version first from the official website: 👉 https://pytorch.org/get-started/locally/ 
 
 📦 Part 1 — Data Download & Preprocessing
@@ -31,15 +29,15 @@ Go to: https://hecktor25.grand-challenge.org/data-download/
 Join the challenge and download Task 1 and Task 2 training data
 
 Unzip both datasets into the project's /Data folder:
-
+```txt
 /Data
    ├── HECKTOR2025 Task 1 Training/Task 1/
    └── HECKTOR2025 Task 2 Training/Task 2/
-
+```
 2. Run preprocessing
 
 This script prepares CT/PET data, segmentation masks, NPZ arrays, and the combined clinical CSV.
-
+```txt
 python ./Data/preprocess_hecktor2025.py \
     --task1_csv "./Data/HECKTOR2025 Task 1 Training/Task 1/HECKTOR_2025_Training_Task_1.csv" \
     --task2_csv "./Data/HECKTOR2025 Task 2 Training/Task 2/HECKTOR_2025_Training_Task_2.csv" \
@@ -48,14 +46,14 @@ python ./Data/preprocess_hecktor2025.py \
     --out_nifti "./Data/preprocessed_nii" \
     --out_preview "./Data/preview_slices" \
     --out_npz "./Data/preprocessed_npz"
-
+```
 3. Output folders
+```txt
 /Data/preprocessed_nii/     → Preprocessed NIfTI (CT/PET)
 /Data/preprocessed_npz/     → Preprocessed NPZ arrays
 /Data/preview_slices/       → 2D preview images
 /Data/overlap_split.csv     → Final clinical CSV
-
-
+```
 Dataset is now ready for model training and XAI evaluation.
 
 
