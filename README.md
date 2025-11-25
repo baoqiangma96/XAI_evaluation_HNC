@@ -142,9 +142,48 @@ Or simply download the pre-trained example files here:
 👉 model_sum.py + epoch_50_sum.safetensors: [YOUR_DOWNLOAD_LINK_HERE](https://drive.google.com/drive/folders/1ldCwm6v4vkwp9vcfjJ0G_aIbgniCg1vs?usp=sharing) 
 
 After uploading the files, click Load model and the model info will appear.  
+
 <img width="1711" height="891" alt="image" src="https://github.com/user-attachments/assets/1c748326-a2ea-405b-9657-79d5e4aa7597" />
 
+🔹 Tab 2 — Explain
 
+This tab generates saliency maps for your model using selected XAI methods.
+
+What to upload
+
+One or more input .npz files  
+These come directly from Part 1 (preprocessed data) (e.g., CHUM-001_input.npz).
+
+What you can do
+
+Select the XAI methods you want to run  
+(only checked methods will be executed)
+
+Adjust heatmap transparency (alpha)
+
+Run all selected methods on all uploaded .npz files (batch mode)
+
+⚠️ Methods currently not runnable
+
+The following methods are displayed but not fully supported in this version:
+
+lrp, attention, attentionrollout, attentionlrp
+
+These will cause error if selected.
+
+What you will get
+
+A grid of saliency heatmaps for each runnable XAI method
+
+2D / 3D visual overlays
+
+Model predictions (Top-1 / Top-5)
+
+JSON summary of prediction and target class
+
+This tab lets you visually compare different explanation methods before running full quantitative evaluation in Tab 3.
+
+<img width="1516" height="945" alt="image" src="https://github.com/user-attachments/assets/c13d84fa-9c1b-4882-a9b0-fb27a056bb79" />
 
 
 !!!!!!!!!!!!!! Part 3. XAI evluation in website, for better interaction and visisulization
