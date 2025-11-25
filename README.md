@@ -248,3 +248,7 @@ Metrics use the LATEC benchmark implementations (adapted for 3D inputs).
 Evaluation uses the XAI maps generated from Tab 2.  
 Plausibility metrics require .npz GTV masks.  
 If a metric is incompatible or fails, it is skipped automatically.  
+
+<img width="1450" height="902" alt="image" src="https://github.com/user-attachments/assets/065d19ea-b6ed-4b3e-94ed-a3079ce932af" />
+
+
