@@ -6,6 +6,21 @@ This study implemented a comprehensive evaluation of 13 explainable (saliency-ba
 The framework is as below:
 <img width="3297" height="1534" alt="3" src="https://github.com/user-attachments/assets/5be01f2e-d7b1-4ad5-8e9a-07ce76f05d80" />
 
+🔧 Installation
+
+1. Create a new Conda environment
+   
+conda create -n xai_app python=3.11
+conda activate xai_app
+
+2. Install the required packages
+
+pip install -r requirements.txt
+
+The requirements.txt includes the correct PyTorch CUDA 11.8 wheels.
+If your system uses a different CUDA version (e.g., CUDA 12.x), please install the matching PyTorch version first from the official website: 👉 https://pytorch.org/get-started/locally/ 
+
+
 !!!!!!!!!!!!!! Part 1. Data download and preprocessing (skip, directly go to Part 3 if you only care XAI evaluation part)
 We used HECKTOR 2025 challenge dataset, please access the 
 https://hecktor25.grand-challenge.org/data-download/ apply join the challenge and download data. We need the data from Task 1 and Task 2. Download, unzip and put them under the /Data folder.
