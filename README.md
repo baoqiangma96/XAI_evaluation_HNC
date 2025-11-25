@@ -244,10 +244,7 @@ All CSV files appear on the right and can be downloaded directly.
 
 Notes
 
-Metrics use the LATEC benchmark implementations (adapted for 3D inputs).
-
-Evaluation uses the XAI maps generated from Tab 2.
-
-Plausibility metrics require .npz GTV masks.
-
-If a metric is incompatible or fails, it is skipped automatically.
+Metrics use the LATEC benchmark implementations (adapted for 3D inputs).  
+Evaluation uses the XAI maps generated from Tab 2.  
+Plausibility metrics require .npz GTV masks.  
+If a metric is incompatible or fails, it is skipped automatically.  
