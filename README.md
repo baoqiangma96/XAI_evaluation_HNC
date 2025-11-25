@@ -63,6 +63,7 @@ Dataset is now ready for model training and XAI evaluation.
 After preprocessing the HECKTOR 2025 data, you can train the 3D DenseNet121 prognostic model.
 
 1. Run model training
+'''txt
 python ./ModelTraining/main.py \
     --model DenseNet121 \
     --input_modality CT PET gtv \
@@ -71,14 +72,14 @@ python ./ModelTraining/main.py \
     --endpoint_path ./Data/overlap_split.csv \
     --data_path ./Data/preprocessed_nii/ \
     --result_path ./result/
-
+'''
 2. Output
 
 The training will generate:
-
+'''txt
 /result/
    └── epoch_50_sum.safetensors     → final trained checkpoint (epoch 50)
-
+'''
 
 This checkpoint will be used for XAI evaluation in Part 3.
 
@@ -86,35 +87,34 @@ This checkpoint will be used for XAI evaluation in Part 3.
 
 This project logs training metrics using Weights & Biases.
 The training script initializes WandB as:
-
+'''txt
 wandb.init(project='ISBI2025', entity='mbq1137723824')
-
+'''
 If you want to use your own WandB account:
 
 Create an account at https://wandb.ai
 
 Replace the project and entity names in the script:
-
+'''txt
 wandb.init(project='YOUR_PROJECT', entity='YOUR_USERNAME')
-
+'''
 
 Log in:
-
+'''txt
 wandb login
-
+'''
 If you do NOT want to use WandB:
 
 Disable logging by running:
-
+'''txt
 WANDB_MODE=disabled python ./ModelTraining/main.py ...
-
+'''
 4. Notes
-
+'''txt
 --input_modality CT PET gtv → model uses 3 channels
-
 --oversample True → balances event/non-event cases
-
 --sum_channel True → merges CT/PET/GTV into combined tensor
+'''
 
 !!!!!!!!!!!!!! Part 2. Outcome prediction model training (skip, directly go to Part 3 if you only care XAI evaluation part)
 
