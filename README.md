@@ -250,7 +250,8 @@ Evaluation uses the XAI maps generated from Tab 2.
 Plausibility metrics require .npz GTV masks.  
 If a metric is incompatible or fails, it is skipped automatically.  
 
-<img width="1447" height="912" alt="image" src="https://github.com/user-attachments/assets/2eb58731-c5ae-4703-897f-34c5582ec33d" />
+<img width="1445" height="913" alt="image" src="https://github.com/user-attachments/assets/1dfefae3-aa67-4a46-a49a-81a44ef6bf00" />
+
 
 
 
