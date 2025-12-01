@@ -154,12 +154,11 @@ This tab generates saliency maps for your model using selected XAI methods.
 What to upload
 
 One or more input .npz files  
-These come directly from Part 1 (preprocessed data) (e.g., CHUM-001_input.npz).
+These come directly from Part 1 ( in ./Data/preprocessed_npz/ ) (e.g., CHUM-001_input.npz).
 
 What you can do
 
-Select the XAI methods you want to run  
-(only checked methods will be executed)
+Select the XAI methods you want to run  (only checked methods will be executed)
 
 Adjust heatmap transparency (alpha)
 
@@ -175,13 +174,9 @@ These will cause error if selected.
 
 What you will get
 
-A grid of saliency heatmaps for each runnable XAI method
+A grid of saliency heatmaps for each runnable XAI method, 3D visual overlays
 
-2D / 3D visual overlays
-
-Model predictions (Top-1 / Top-5)
-
-JSON summary of prediction and target class
+Model predictions 
 
 This tab lets you visually compare different explanation methods before running full quantitative evaluation in Tab 3.
 
