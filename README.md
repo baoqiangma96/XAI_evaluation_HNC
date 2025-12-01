@@ -32,7 +32,7 @@ Join the challenge and download Task 1 and Task 2 training data
 Unzip both datasets into the project's /Data folder:
 ```txt
 /Data
-   ├── HECKTOR2025 Task 1 Training/Task 1/
+   ├── HECKTOR2025Task 1 Training/Task 1/
    └── HECKTOR2025 Task 2 Training/Task 2/
 ```
 ### 2. Run preprocessing
