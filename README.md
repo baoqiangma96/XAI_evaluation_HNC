@@ -78,8 +78,8 @@ python ./ModelTraining/main.py \
 
 The training will generate:
 ```txt
-/result/
-   └── epoch_50_sum.safetensors     → final trained checkpoint (epoch 50)
+/result/DenseNet121_input_['CT', 'PET', 'gtv']_sum_OS_True/
+   └── epoch_50.safetensors     → final trained checkpoint (epoch 50)
 ```
 
 This checkpoint will be used for XAI evaluation in Part 3.
