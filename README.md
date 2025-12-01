@@ -78,7 +78,7 @@ python ./ModelTraining/main.py \
 
 The training will generate:
 ```txt
-/result/DenseNet121_input_['CT', 'PET', 'gtv']_sum_OS_True/
+/result/DenseNet121_input_['CT', 'PT', 'gtv']_sum_OS_True/
    └── epoch_50.safetensors     → final trained checkpoint (epoch 50)
 ```
 
@@ -109,7 +109,7 @@ If you do NOT want to use WandB:
 Disable logging by running:
 ```txt
 $env:WANDB_MODE="disabled"
-python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PET gtv --oversample True --sum_channel True --endpoint_path ./Data/overlap_split.csv --data_path ./Data/preprocessed_nii/ --result_path ./result/
+python ./ModelTraining/main.py --model DenseNet121 --input_modality CT PT gtv --oversample True --sum_channel True --endpoint_path ./Data/overlap_split.csv --data_path ./Data/preprocessed_nii/ --result_path ./result/
 ```
 ### 4. Notes
 ```txt
