@@ -25,7 +25,7 @@ The requirements.txt includes the correct PyTorch CUDA 11.8 wheels. If your syst
 
 ### 1. Download HECKTOR 2025 Data
 
-Go to: https://hecktor25.grand-challenge.org/data-download/
+Go to: https://hecktor25.grand-challenge.org/
 
 Join the challenge and download Task 1 and Task 2 training data
 
