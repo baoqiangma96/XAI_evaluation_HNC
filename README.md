@@ -253,5 +253,11 @@ If a metric is incompatible or fails, it is skipped automatically.
 <img width="1445" height="913" alt="image" src="https://github.com/user-attachments/assets/1dfefae3-aa67-4a46-a49a-81a44ef6bf00" />
 
 
+## Acknowledgments
+This repository includes adapted components from the LATEC benchmark
+[https://github.com/med-air/LATEC](https://github.com/IML-DKFZ/latec). The original code was extended to support
+3D CT inputs and parameter settings were adapted for HNC XAI methods implementation and metrics evaluation.
+
+
 
 
