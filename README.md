@@ -188,11 +188,9 @@ This tab runs quantitative evaluation of all selected XAI methods using four cat
 
 What you need to upload
 
-One or more ground-truth GTV masks (.npz only)  
-These should correspond to the same patients you used in Tab 2.
+One or more ground-truth GTV masks (.npz only). These should correspond to the same patients you used in Tab 2. They are the same files in ./Data/preprocessed_npz/ (e.g., CHUM-001_input.npz).
 
-Only .npz masks are supported in this version.  
-NIfTI masks (.nii/.nii.gz) are not supported for evaluation.  
+Only .npz masks are supported in this version.  NIfTI masks (.nii/.nii.gz) are not supported for evaluation.  
 
 What you can do
 
@@ -241,7 +239,7 @@ All CSV files appear on the right and can be downloaded directly.
 
 Notes
 
-Metrics use the LATEC benchmark implementations (adapted for 3D inputs).  
+Metrics use the LATEC benchmark implementations (adapted parametrs for 3D HNC imaging inputs and XAI methods implementaion and evaluation).  
 Evaluation uses the XAI maps generated from Tab 2.  
 Plausibility metrics require .npz GTV masks.  
 If a metric is incompatible or fails, it is skipped automatically.  
