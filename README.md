@@ -50,10 +50,10 @@ python ./Data/preprocess_hecktor2025.py \
 ```
 ### 3. Output folders
 ```txt
-/Data/preprocessed_nii/     → Preprocessed NIfTI (CT/PET)
-/Data/preprocessed_npz/     → Preprocessed NPZ arrays
-/Data/preview_slices/       → 2D preview images
-/Data/overlap_split.csv     → Final clinical CSV
+/Data/preprocessed_nii/     → Preprocessed NIfTI (CT/PET), which will used for model training.  
+/Data/preprocessed_npz/     → Preprocessed NPZ arrays, which will be used for XAI methods
+/Data/preview_slices/       → 2D preview images, of CT, PET, GTV
+/Data/overlap_split.csv     → Final clinical CSV, for model training
 ```
 Dataset is now ready for model training and XAI evaluation.  
 
