@@ -140,7 +140,8 @@ Upload your model architecture (.py) from Part 2
 Upload your trained weights (.safetensors) from Part 2
 
 Or simply download the pre-trained example files here:
-👉 model_sum.py + epoch_50_sum.safetensors: [YOUR_DOWNLOAD_LINK_HERE](https://drive.google.com/drive/folders/1ldCwm6v4vkwp9vcfjJ0G_aIbgniCg1vs?usp=sharing) 
+👉  epoch_50_sum.safetensors: [YOUR_DOWNLOAD_LINK_HERE](https://drive.google.com/drive/folders/1ldCwm6v4vkwp9vcfjJ0G_aIbgniCg1vs?usp=sharing)  
+and find the model architetcure file model_sum.py in ./ModelTrarining for uploading.
 
 After uploading the files, click Load model and the model info will appear.  
 
